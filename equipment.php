@@ -24,7 +24,7 @@ class EquipmentPlugin extends Plugin{
     private function install(){
         multiquery(str_replace('{prefix}',$this->table(),file_get_contents('sql/createTables.sql')));
     }
-    private function pre_uninstall(){
+    public function pre_uninstall(){
         multiquery(str_replace('{prefix}',$this->table(),file_get_contents('sql/dropTables.sql')));
     }
     private function multiquery($queries){
