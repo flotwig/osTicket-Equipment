@@ -1,5 +1,5 @@
 <?php
-define('EQUIPMENT_PATH',dirname(__DIR__).'/');
+define('EQUIPMENT_PATH',dirname(__DIR__).'/osTicket-Equipment/');
 require_once(INCLUDE_DIR.'class.plugin.php');
 require_once(INCLUDE_DIR.'class.signal.php');
 require_once(INCLUDE_DIR.'class.app.php');
