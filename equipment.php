@@ -1,15 +1,18 @@
 <?php
+define('EQUIPMENT_PATH',dirname(__DIR__).'/');
 require_once(INCLUDE_DIR.'class.plugin.php');
 require_once(INCLUDE_DIR.'class.signal.php');
 require_once(INCLUDE_DIR.'class.app.php');
 require_once(INCLUDE_DIR.'class.dispatcher.php');
 require_once(INCLUDE_DIR.'class.dynamic_forms.php');
 require_once(INCLUDE_DIR.'class.osticket.php');
+require_once(EQUIPMENT_PATH.'vendor/autoload.php');
+require_once(EQUIPMENT_PATH.'controller/dashboard.php');
+require_once(EQUIPMENT_PATH.'controller/devices.php');
+require_once(EQUIPMENT_PATH.'controller/checkouts.php');
 require_once('config.php');
 class EquipmentPlugin extends Plugin{
-    private $EQUIPMENT_PATH;
     public function bootstrap(){
-        $this->EQUIPMENT_PATH = dirname(__DIR__).'/';
         if($this->firstRun())
             $this->install();
         Signal::connect('apps.scp',array('EquipmentPlugin','callbackDispatch'));
