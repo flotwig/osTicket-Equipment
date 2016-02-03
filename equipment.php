@@ -52,7 +52,7 @@ class EquipmentPlugin extends Plugin{
     private function createStaffMenu(){
         return Application::registerStaffApp('Equipment','dispatcher.php/equipment/',array('iconclass'=>'faq-categories'));
     }
-    private function table($name=''){
+    public static function table($name=''){
         return TABLE_PREFIX.'_equipment_'.$name;
     }
     private function firstRun(){

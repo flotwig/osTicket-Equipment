@@ -11,4 +11,7 @@ class Controller{
         echo $template->render($variables);
         require_once(STAFFINC_DIR.'footer.inc.php');
     }
+    private function getList($table){
+        \EquipmentPlugin::table($table);
+    }
 }
