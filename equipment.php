@@ -22,7 +22,7 @@ class EquipmentPlugin extends Plugin{
         // dashboard routing
         $object->append(url('^/equipment/$',
             patterns('controller\Dashboard',
-                url_get('^$','defaultAction')
+                url_get('^$','dashboardAction')
             )
         ));
         // device management routing
