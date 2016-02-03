@@ -8,5 +8,8 @@
       "name": "Zach Bloomquist",
       "email": "ostecomp@chary.us"
     }
-  ]
+  ],
+  "require": {
+    "twig/twig": "^1.24"
+  }
 }
